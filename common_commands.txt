@@ -1,0 +1,27 @@
+Run the tests parameters
+
+dotnet test
+DOn't build the project again
+--no-build
+
+#Specify a logger
+--logger "trx;LogFileName=./results/test-explorer-0HOaMR/0.trx"
+
+#Filter by FullyQualifiedName
+--filter "FullyQualifiedName=SpecflowBasics.Features.FirstFeatureFeature.FirstScenario"
+#Valid values for NUNIt
+FullyQualifiedName
+Name
+TestCategory
+Priority
+
+#Valid values for XUnit
+FullyQualifiedName
+DisplayName
+Category
+
+#Run the current test
+dotnet test --filter "TestCategory=current"
+
+#Log to the console with detailed verbosity
+dotnet test --logger "console;verbosity=detailed"

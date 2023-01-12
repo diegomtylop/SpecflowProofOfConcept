@@ -1,0 +1,15 @@
+{
+
+  "dotnet.enableTelemetry": false,
+  "dotnet-test-explorer.testProjectPath": "./SpecflowBasics/SpecflowBasics.csproj",
+  "dotnet-test-explorer.pathForResultFile":"./SpecflowBasics/TestResults/",
+  "dotnet-test-explorer.showCodeLens": true,
+  "dotnet-test-explorer.enableTelemetry": false,
+  "cucumberautocomplete.steps": [
+    "./**/StepDefinitions/*.cs",
+  ],
+  "cucumberautocomplete.syncfeatures": "**/Features/*.feature",
+  "cucumberautocomplete.smartSnippets":true,
+  "cucumberautocomplete.strictGherkinCompletion": false,
+  "specflowtools.stepfilesearchglob":"**/StepDefinitions/*.cs"
+}

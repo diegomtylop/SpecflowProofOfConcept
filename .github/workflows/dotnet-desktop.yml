@@ -36,7 +36,7 @@
 # For a complete CI/CD sample to get started with GitHub Action workflows for Desktop Applications,
 # refer to https://github.com/microsoft/github-actions-for-desktop-apps
 
-name: .NET Core Desktop
+name: Execute tests
 
 on:
   push:
@@ -48,9 +48,9 @@ jobs:
 
   build:
 
-    strategy:
-      matrix:
-        configuration: [Debug, Release]
+    #strategy:
+    #  matrix:
+    #    configuration: [Debug, Release]
 
     runs-on: windows-latest  # For a list of available runner types, refer to
                              # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
@@ -71,6 +71,6 @@ jobs:
       with:
         dotnet-version: 7.x
 
-    # Execute all unit tests in the solution
+    # Execute all tests in the solution
     - name: Execute unit tests
       run: dotnet test
